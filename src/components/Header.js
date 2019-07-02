@@ -8,9 +8,23 @@ import Navbar from "./Navbar";
 
 export  default class Header extends Component
 {
+    scrolling(e)
+    {
+        if(window.scrollY >= 90 && this.state.header === "de_header_2")
+            this.setState({header:"de_header_2 clone smaller"});
+        else if (window.scrollY <90 && this.state.header === "de_header_2 clone smaller")
+            this.setState({header:"de_header_2"});
+    }
+    constructor($props)
+    {
+        super($props);
+        window.addEventListener('scroll', this.scrolling.bind(this));
+        this.state = {header:"de_header_2"};
+    }
+
     render() {
         return(
-            <header className="de_header_2">
+            <header className={this.state.header}>
 
 
                 <div className="info">

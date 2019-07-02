@@ -6,7 +6,7 @@ export  default class Slider extends Component
 {
     render() {
         return(
-            <Carousel>
+            <Carousel >
                 <div>
                     <img src={image} />
                     <p className="legend">Legend 1</p>
