@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
+import '../style/bootstrap.css';
 import '../style/style.css';
 import '../style/rtl.css';
-//import '../style/settings.css';
 import '../style/main.css';
+
 import Navbar from "./Navbar";
 
 export  default class Header extends Component
