@@ -1,0 +1,3 @@
+#mainmenu li:hover .dropdown-menu{
+    display: block;
+}
