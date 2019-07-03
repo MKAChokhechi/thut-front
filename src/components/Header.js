@@ -37,7 +37,7 @@ export  default class Header extends Component
                                     <li><i className="fa fa-envelope-o"></i>
                                         ایمیل:
                                         <strong>contact@yoursite.com</strong></li>
-                                    <li><i className="fa fa-clock-o"></i>
+                                    <li><i className="fa fa-clock-o"/>
                                         ساعت کاری: <strong>08:00-17:00</strong></li>
                                 </ul>
                             </div>
