@@ -6,8 +6,8 @@ section{
     padding:0;
 }
 .person-showcase{
-    margin-right: 10px;
-    padding:60px;
+    margin: 0;
+    padding: 0;
     list-style: none;
     width: 100%;
 }
