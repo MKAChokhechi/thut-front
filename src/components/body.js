@@ -7,7 +7,8 @@ export default class Body extends Component{
     render() {
         return (
             <Config/>
-            <Gallery/>
+            <Gallery/>  //ای چرا ایطوره؟
+
         );
     }
 
