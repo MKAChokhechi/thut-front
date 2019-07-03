@@ -1,0 +1,35 @@
+
+section{
+    padding: 80px 0;
+}
+.section-person{
+    padding:0;
+}
+.person-showcase{
+    margin-right: 10px;
+    padding:60px;
+    list-style: none;
+    width: 100%;
+}
+.person-showcase li{
+    width: 25%;
+    display: block;
+    float: left;
+}
+.person-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.person-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+.person-photo img:hover{
+    opacity: 1;
+    transform: scale(1.3);
+}

@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import  '../style/body.css';
 import image from '../image/wide1.jpg';
 
 export default class Body extends Component{
