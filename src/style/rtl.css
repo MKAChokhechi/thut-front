@@ -35,7 +35,7 @@ See: https://codex.wordpress.org/Right_to_Left_Language_Support
  * 1.0 - Normalize
  */
 
-body {
+header {
     direction: rtl;
     unicode-bidi: embed;
 }
@@ -79,9 +79,8 @@ header nav {float: left;}
  * 3.0 - Elements
  */
 .project-info {text-align: right;}
-.owl-carousel{direction: ltr;}
-.owl-carousel .owl-item {text-align: right;}
-.text-slider.owl-carousel .owl-item {text-align: center;}
+
+
 .box-number .text {margin-left: 0;margin-right: 100px;}
 .arrow-up:before, .arrow-down:before{margin: 0 -8px 0 0 !important;}
 .post-content {direction: rtl;}
@@ -107,7 +106,7 @@ header nav {float: left;}
 .blog-list .date-box .month{letter-spacing: 6px;}
 .pagination{width: 100%;}
 .pagination > li {display: inline-block;}
-.rev_slider_wrapper{direction: ltr;}
+
 @media only screen and (max-width: 992px) {
     #mainmenu a{text-align:right;padding-right: 0px;}
     #mainmenu li ul li {padding-left: 0 !important;padding-right: 40px;}
@@ -206,8 +205,8 @@ a.btn-big:after{
 #filters a, .filters a{
   letter-spacing: 0;
 }
-.rev_slider_wrapper{direction:rtl !important}
-.de_tab.tab_steps .de_nav.process-circle-textimage .content-mid .inner, .de_tab.tab_steps .de_nav.process-circle-textonly .content-mid .inner,nav ul#mainmenu > li.current-menu-ancestor > a, .mainmenu li.current-menu-item > a, nav ul.mainmenu > li.current-menu-ancestor > a, #mainmenu > li > a:hover, #mainmenu > li.current-menu-item > a, header.smaller #mainmenu > li > a:hover, header.smaller #mainmenu > li.current-menu-item > a,#mainmenu li li li a,#mainmenu li li a,h1, h2, h3, h4, h5, h6, .de_count h3, .typing-wrap, .de_tab.tab_steps .de_nav li span, h3 b, ul.countdown li span, ul.countdown li p, .teaser-text, .text-slider, .big-white, .ultra-big-white, .big-text h2, .de-navbar-left header .mainmenu > li{
+
+.de_tab.tab_steps .de_nav.process-circle-textimage .content-mid .inner, .de_tab.tab_steps .de_nav.process-circle-textonly .content-mid .inner,nav ul#mainmenu > li.current-menu-ancestor > a, .mainmenu li.current-menu-item > a, nav ul.mainmenu > li.current-menu-ancestor > a, #mainmenu > li > a:hover, #mainmenu > li.current-menu-item > a, header.smaller #mainmenu > li > a:hover, header.smaller #mainmenu > li.current-menu-item > a,#mainmenu li li li a,#mainmenu li li a,h1, h2, h3, h4, h5, h6, .de_count h3, .typing-wrap, .de_tab.tab_steps .de_nav li span, h3 b, ul.countdown li span, ul.countdown li p, .teaser-text,  .big-white, .ultra-big-white, .big-text h2, .de-navbar-left header .mainmenu > li{
   font-family:IRANSans !important;
 }
 *{

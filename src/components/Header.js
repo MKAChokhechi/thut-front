@@ -8,9 +8,23 @@ import Navbar from "./Navbar";
 
 export  default class Header extends Component
 {
+    scrolling(e)
+    {
+        if(window.scrollY >= 90 && this.state.header === "de_header_2")
+            this.setState({header:"de_header_2 clone smaller"});
+        else if (window.scrollY <90 && this.state.header === "de_header_2 clone smaller")
+            this.setState({header:"de_header_2"});
+    }
+    constructor($props)
+    {
+        super($props);
+        window.addEventListener('scroll', this.scrolling.bind(this));
+        this.state = {header:"de_header_2"};
+    }
+
     render() {
         return(
-            <header className="de_header_2">
+            <header className={this.state.header}>
 
 
                 <div className="info">
@@ -23,7 +37,7 @@ export  default class Header extends Component
                                     <li><i className="fa fa-envelope-o"></i>
                                         ایمیل:
                                         <strong>contact@yoursite.com</strong></li>
-                                    <li><i className="fa fa-clock-o"></i>
+                                    <li><i className="fa fa-clock-o"/>
                                         ساعت کاری: <strong>08:00-17:00</strong></li>
                                 </ul>
                             </div>
