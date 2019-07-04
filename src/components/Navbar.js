@@ -3,14 +3,12 @@ import Dropdown from "./Dropdown";
 export  default class Navbar extends Component
 {
     render() {
+        const {buttons} = this.props;
         return(
             <nav>
 
                 <ul id="mainmenu">
-                    <Dropdown/>
-                    <Dropdown/>
-                    <Dropdown/>
-                    <Dropdown/>
+                    {buttons.map((data,index)=>(<Dropdown button={data} key={index}/>))}
                 </ul>
             </nav>
         );

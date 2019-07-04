@@ -10,16 +10,16 @@ export  default class Header extends Component
 {
     scrolling(e)
     {
-        if(window.scrollY >= 90 && this.state.header === "de_header_2")
+        if(window.scrollY >= 90 && this.state.header === "de_header_2 header-bg")
             this.setState({header:"de_header_2 clone smaller"});
         else if (window.scrollY <90 && this.state.header === "de_header_2 clone smaller")
-            this.setState({header:"de_header_2"});
+            this.setState({header:"de_header_2 header-bg"});
     }
     constructor($props)
     {
         super($props);
         window.addEventListener('scroll', this.scrolling.bind(this));
-        this.state = {header:"de_header_2"};
+        this.state = {header:"de_header_2 header-bg"};
     }
 
     render() {
@@ -86,7 +86,7 @@ export  default class Header extends Component
                             </div>
                             <span id="menu-btn"></span>
 
-                            <Navbar/>
+                            <Navbar buttons={this.props.buttons}/>
                         </div>
 
                     </div>
