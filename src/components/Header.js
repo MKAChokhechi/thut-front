@@ -86,7 +86,7 @@ export  default class Header extends Component
                             </div>
                             <span id="menu-btn"></span>
 
-                            <Navbar/>
+                            <Navbar buttons={this.props.buttons}/>
                         </div>
 
                     </div>
