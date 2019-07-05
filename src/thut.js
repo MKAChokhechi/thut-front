@@ -16,7 +16,7 @@ export  default class Thut extends Component
         axios.get("http://api.thut.ir/main/")
             .then(response=>{
                 let  data = response.data;
-                this.setState({header:data})
+                this.setState({header:data.term})
             })
             .catch(error=>{
                 console.log(error);
