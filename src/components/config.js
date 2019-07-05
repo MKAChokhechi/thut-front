@@ -6,17 +6,17 @@ export default class Config extends Component{
 
             <section className="section__config">
                 <ul className="config__showcase">
-                    <li className="figure">
-                        <a className="figure__item" href="#">  همه موارد</a>
+                    <li className="figure body-active">
+                          همه موارد
                     </li>
                     <li className="figure">
-                        <a className="figure__item" href="#">    ویدیو</a>
+                      ویدیو
                     </li >
                     <li className="figure">
-                        <a className="figure__item" href="#">     آهنگ</a>
+                      تریلر
                     </li>
                     <li className="figure">
-                        <a className="figure__item" href="#">   عکس</a>
+                       عکس
                     </li>
                 </ul>
             </section>

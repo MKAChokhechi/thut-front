@@ -3,7 +3,9 @@ import React,{Component} from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import Slider from "./components/Slider";
 import Footer from "./components/Footer";
+import  Body from "./components/body";
 import axios from "axios";
+import Magnific from "./components/Magnific";
 export  default class Thut extends Component
 {
     constructor($props)
@@ -16,7 +18,7 @@ export  default class Thut extends Component
         axios.get("http://api.thut.ir/main/")
             .then(response=>{
                 let  data = response.data;
-                this.setState({header:data})
+                this.setState({header:data.term})
             })
             .catch(error=>{
                 console.log(error);
@@ -26,8 +28,10 @@ export  default class Thut extends Component
 
         return(
             <div id="wrapper">
+            <Magnific/>
             <Header buttons={this.state.header.filter(el=>(el.type==="navButton"))}/>
             <Slider />
+            <Body />
             <Footer/>
             </div>
         );
