@@ -1,47 +1,72 @@
 import React,{Component} from 'react';
 import  '../style/Magnific.css';
-import image from "../image/wide1.jpg";
 import Slider from "./Slider";
-
+import axios from "axios";
 
 export default class Magnific extends Component{
-    render() {
-        return (
-            <div className="magnific"  >
+    constructor($props)
+    {
+        super($props);
+        this.state={post:{}}
+    }
+     componentWillReceiveProps(nextProps, nextContext)
+      {
+        if(nextProps.post === 0)
+            return
+        axios.get("http://api.thut.ir/posts/"+nextProps.post+"/")
+            .then(response=>{
+                let  data = response.data;
+                console.log(data);
+                this.setState({post:data});
 
-                <div className="container box-magnific text-right">
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+    }
 
-                        <span className="glyphicon glyphicon-remove close-btn"> </span>
+    getMagnfic()
+    {
+        document.getElementsByTagName("html")[0].style="margin-right: 15px; overflow: hidden";
+        const  {post}=this.state;
+        return(
+        <div className="magnific"  >
+
+            <div className="container box-magnific text-right" style={post.length===0?{display:'none'}:{}}>
+
+                <span className="glyphicon glyphicon-remove close-btn" onClick={()=>(this.props.close())}> </span>
 
 
-                    <div className="row " >
+                <div className="row  rouw" >
 
-                        <div className="col-lg-8 col-md-8">
-                            <Slider/>
-                            <img src={image} alt="Work" className="img"/>
-                            <img src={image} alt="Work" className="img"/>
-                            <img src={image} alt="Work" className="img"/>
-                            <img src={image} alt="Work" className="img"/>
-                            <img src={image} alt="Work" className="img"/>
-                        </div>
-                        <div className="col-lg-4 col-md-4">
-                            <div className="detail">
-                                <p>در تاریخ امروز</p>
-                                <p>در تاریخ امروز</p>
-                                <p>در  امروز</p>
-                            </div>
-                             داستان یییییسرییییییییییییییییییییییییی
-                            یییییییییییییییییییییییییییییییییی
-                            ییییییییییییییییییییییییی
-                            یییییییییییییییییییییییی
-                            ییییییییییییییییییییییییییی
-                        </div>
+                    <div className="col-lg-8 col-md-8">
+                        <Slider images={"http://thut.ir/"+post.image}/>
+
                     </div>
-
+                    <div className="col-lg-4 col-md-4">
+                        <h2>{post.title}</h2>
+                        <div className="detail">
+                            <p>در تاریخ امروز</p>
+                            <p>در تاریخ امروز</p>
+                            <p>در  امروز</p>
+                        </div>
+                        {post.content}
+                    </div>
                 </div>
 
             </div>
-        );
+
+        </div>);
+
+    }
+
+    render()
+    {
+        if(this.props.post===0)
+            return(<div></div>);
+        return (
+            this.getMagnfic()
+         );
     }
 
 }
