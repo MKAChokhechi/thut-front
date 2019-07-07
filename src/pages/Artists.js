@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 
 
-export  default class Name extends Component
+export default  class Artists extends Component
 {
     render() {
         return(

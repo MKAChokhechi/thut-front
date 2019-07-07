@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import  '../style/Magnific.css';
 import Slider from "./Slider";
 import axios from "axios";
-import imageg from "../assets/loading02.gif";
+import imageg from "../assets/loding.gif";
 
 export default class Magnific extends Component{
     constructor($props)

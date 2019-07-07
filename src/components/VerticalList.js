@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import  '../style/VerticalList.css';
-import imageg from "../assets/loading02.gif";
+import imageg from "../assets/loding.gif";
 export default class VerticalList extends Component{
     render() {
         return (

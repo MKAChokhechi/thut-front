@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import {Link} from "react-router-dom";
 
 export  default class Dropdown extends Component
 {
@@ -21,7 +21,7 @@ export  default class Dropdown extends Component
 
             <li id={"menu-item-"+button.id}
                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-141 current_page_item menu-item-has-children  active">
-                <span></span><a title={button.term.name} href={"http://thut.ir/p/"+button.slug}>{button.term.name}</a>
+                <span></span><Link title={button.term.name} to={"/"+(button.term.slug==="صفحه-اصلی"?"":button.term.slug)}>{button.term.name}</Link>
                 <ul role="menu" className=" dropdown-menu">
                 {
                     button.sub.map(this.getchild.bind(this))

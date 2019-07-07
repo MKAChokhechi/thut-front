@@ -1,13 +1,12 @@
 import React,{Component} from 'react';
+import VerticalList from "../components/VerticalList";
 
 
-export  default class Name extends Component
+export  default class Movies extends Component
 {
     render() {
         return(
-           <div>
-
-           </div>
+            <VerticalList/>
         );
     }
 }
