@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import  '../style/body.css';
 import Gallery from "./gallery";
 import Config from "./config";
+import VerticalList from "./VerticalList";
 
 export default class Body extends Component{
 
@@ -11,6 +12,7 @@ export default class Body extends Component{
             <div>
             <Config/>
             <Gallery open={open} posts={posts} />
+            <VerticalList/>
             </div>
         );
     }

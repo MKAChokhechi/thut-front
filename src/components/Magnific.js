@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import  '../style/Magnific.css';
 import Slider from "./Slider";
 import axios from "axios";
+import imageg from "../assets/loading02.gif";
 
 export default class Magnific extends Component{
     constructor($props)
@@ -24,6 +25,14 @@ export default class Magnific extends Component{
                 console.log(error);
             })
     }
+     isEmpty(obj) {
+        for(var prop in obj) {
+            if(obj.hasOwnProperty(prop))
+                return false;
+        }
+
+        return true;
+    }
 
     getMagnfic()
     {
@@ -32,12 +41,12 @@ export default class Magnific extends Component{
         return(
         <div className="magnific"  >
 
-            <div className="container box-magnific text-right" style={post.length===0?{display:'none'}:{}}>
+            <div className="container box-magnific text-right" >
 
-                <span className="glyphicon glyphicon-remove close-btn" onClick={()=>(this.props.close())}> </span>
+                <span className="glyphicon glyphicon-remove close-btn" onClick={()=>{this.props.close();this.setState({post:{}})}} />
+                <img className="mag-load" src={imageg} style={!this.isEmpty(post)?{display:'none'}:{}} />
 
-
-                <div className="row  rouw" >
+                <div className="row  rouw" style={this.isEmpty(post)?{display:'none'}:{}} >
 
                     <div className="col-lg-8 col-md-8">
                         <Slider images={"http://thut.ir/"+post.image}/>
