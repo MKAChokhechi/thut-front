@@ -1,0 +1,140 @@
+
+section{
+    padding: 0 0;
+}
+.section-person{
+    padding:0;
+}
+.person-showcase{
+    margin-right: 0;
+    padding:0;
+    list-style: none;
+    width: 100%;
+}
+.person-showcase li{
+    width: 25%;
+    display: block;
+    float: left;
+}
+.person-photo{
+
+    border-right: 2px solid #181a1b;
+    border-bottom: 2px solid #181a1b;
+    overflow: hidden;
+    background-color: black;
+}
+.person-photo:last-child{
+    border-right: none;
+}
+.person-photo img{
+
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+.person-photo:hover img{
+    opacity: 1;
+    transform: scale(1.33);
+}
+.section__config
+{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+    height: 4em;
+    color: #111;
+    margin: 0;
+    padding: 70px 0 100px 0;
+}
+
+.config__showcase{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*list-style: none;*/
+    /*flex-flow: row-reverse;*/
+    /*font-size: 16px;*/
+    /*letter-spacing: 1px;*/
+    /*padding: 0;*/
+    /*margin-bottom: 30px;*/
+    /*margin-top: 30px;*/
+    /*font-weight: 400;*/
+    /*font-family: "Open Sans",Arial, Helvetica, sans-serif;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+    list-style-type: none;
+    display: flex;
+    flex-flow: row-reverse;
+
+}
+.figure
+{
+    /*display: flex;*/
+    /*margin-right: 5px;*/
+    /*margin-bottom: 0;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 25px;
+    color: #b7b7b7;
+    padding: 20px;
+    vertical-align: middle;
+}
+ .figure[class="figure"]:hover
+ {
+     background-color: #111111;
+
+
+
+
+ }
+.figure__item:hover
+{
+    /*color: rgba(17, 17, 17, 0.45);*/
+    /*align-items: center;*/
+    /*padding: 5px;*/
+    /*background-color: #FAB207;*/
+    /*color: #111;*/
+    
+}
+.img{
+    width: 100%;
+    height: 300px;
+}
+.body-active
+{
+background-color: #FAB207;
+    color: #111;
+}
+.picframetex
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    color:#FAB207 ;
+    font-weight: bold;
+    background-color: rgba(12,12,12,0.8);
+    text-align: center;
+
+}
+.picframetex span
+{
+    display: block;
+    transform: translateX(-50%) translateY(-50%);
+}
+.picframetex:hover span
+{
+    margin-left: 47%;
+    margin-top: 40%;
+    transition: margin 0.4s;
+}
+.person-photo:hover .picframetex{
+    display: block;
+
+}
