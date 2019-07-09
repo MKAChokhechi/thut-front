@@ -98,10 +98,30 @@ section{
     /*color: #111;*/
     
 }
-.img{
-    width: 100%;
-    height: 300px;
+@media only screen and (max-width: 1200px) {
+    .img{
+        width: 100%;
+        height: 480px;
+    }
+    .mainCarousel
+    {
+        ax-height: 700px;
+    }
 }
+
+@media only screen and (min-width: 1200px) {
+    .img{
+        width: 100%;
+        height: 350px;
+    }
+    .mainCarousel
+    {
+        max-height: 700px;
+    }
+}
+
+
+
 .body-active
 {
 background-color: #FAB207;
@@ -136,5 +156,18 @@ background-color: #FAB207;
 }
 .person-photo:hover .picframetex{
     display: block;
+
+}
+
+.description
+{
+    position: absolute;
+    top: 28%;
+    right: 5%;
+    direction: rtl;
+    color: white;
+    font-family: IRANSans, serif ;
+    font-weight: 200;
+    font-size: 18px;
 
 }
