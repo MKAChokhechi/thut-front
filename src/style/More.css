@@ -2,12 +2,15 @@
 {
     margin-top: 150px;
 }
+.rouws
+{
+    margin-top: 50px;
+}
 .post__content
 {
     list-style: none;
     line-height: 1.7em;
     margin-bottom: 30px;
-    /*margin-top: 80px;*/
     padding-bottom: 15px;
     border-bottom: solid 1px rgba(255,255,255,.1);
 }
@@ -15,7 +18,6 @@
 {
     position: relative;
     display: block;
-    /*margin-top: 80px;*/
     width: 100%;
     height: 100%;
 
@@ -34,7 +36,7 @@
 .post__text
 {
     margin-top: 40px;
-    padding-right: 80px;
+    /*padding-right: 80px;*/
 
 }
 .btn__more
@@ -105,6 +107,12 @@ a, a:hover, a:active, a:focus {
     font-size: 25px;
     line-height: inherit;
 }
+
+.vsearch button:focus
+{
+    box-shadow: none;
+    outline: none !important;
+}
 .border_widget
 {
     margin-bottom: 60px;
@@ -142,12 +150,6 @@ a, a:hover, a:active, a:focus {
 {
     list-style: none;
     display: block;
-    /*!*list-style-type: disc;*!*/
-    /*margin-block-start: 1em;*/
-    /*margin-block-end: 1em;*/
-    /*margin-inline-start: 0px;*/
-    /*margin-inline-end: 0px;*/
-    /*padding-inline-start: 40px;*/
     padding:0;
 }
 .tagload_li
@@ -178,35 +180,53 @@ a, a:hover, a:active, a:focus {
 }
 .post_info
 {
+     direction: rtl;
+    font-family: IRANSans,sans-serif;
+
+}
+.post_info  a:hover
+{
+    color: #FAB702;
     direction: rtl;
-    display: flex;
-    justify-content: space-between;
+    text-decoration: none;
 }
 .post_info_span
 {
-    display: flex;
-    flex-flow: row;
-    margin-right: 60px;
+    direction: rtl;
 }
-.post_info_span span i
+.post_info_span div
 {
+    display: inline-block;
+    height: 40px;
+    text-align: right;
+}
+.post_info_span div i
+{
+
     color: white;
     padding: 0 10px 0 10px;
+
 }
-.post_info_span span a
+.post_info_span div a
 {
     margin-right: 5px;
     color: #FAB702;
 }
 .post_info_share
 {
-     display: flex;
-    flex-flow: row;
-
+    text-align: left;
+}
+.post_info_share span
+{
+    position: inherit;
+}
+.info_share_links
+{
+    display: inline-block;
 }
 .info_share_links a
 {
-    margin-right: 8px;
+    margin-right: 12px;
 }
 .post_nav
 {
@@ -220,30 +240,120 @@ a, a:hover, a:active, a:focus {
 }
 .post_links
 {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
 }
 .post_next
 {
-
-    display: flex;
-    flex-flow: column;
+    direction: ltr;
+    float: left;
 }
 .post_previous
 {
-    direction: ltr;
-    display: flex;
-    flex-flow: column;
-
+    float: right;
 }
 .comment_div
 {
     direction: rtl;
     list-style: none;
-    line-height: 1.7em;
     margin-bottom: 60px;
-    /*margin-top: 80px;*/
-    padding-bottom: 25px;
-    border-bottom: solid 1px rgba(255,255,255,.1);
 }
+.comment_leave textarea
+{
+    width: 100%;
+    height: 180px;
+    border: 1px solid #E4DBDB;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: transparent;
+    font-weight: 400;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: none;
+
+}
+.comment_leave input
+{
+    width: 100%;
+    border: 1px solid #E4DBDB;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: transparent;
+    font-weight: 400;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: none;
+
+}
+.comment_leave button
+{
+    background-color:#FAB702 ;
+    padding: 6px 12px;
+    transition: all 0.5s;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    width: auto;
+
+}
+.comment_leave textarea:focus
+{
+    box-shadow: none;
+    outline: none !important;
+    border: solid 1px #FAB702 ;
+}
+
+.comment_leave input:focus
+{
+    box-shadow: none;
+    outline: none !important;
+    border: solid 1px #FAB702 ;
+}
+
+.comment_leave button:focus
+{
+    box-shadow: none;
+    outline: none !important;
+}
+.movies
+{
+    background-color: #181a1b;
+}
+@media only screen and (min-width: 1200px) {
+    
+}
+@media only screen and (min-width: 990px) {
+
+}
+@media only screen and (min-width: 770px) {
+
+}
+@media only screen and (max-width: 770px) {
+.post_next a:last-child , .post_previous a:last-child{
+    display: none;
+
+}
+.post_next  , .post_previous {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+    .post_info_share , .post_info_span {
+        text-align: center;
+
+    }
+    .post__image
+    {
+        padding: 0;
+        margin-left: -10%;
+        width: 120%;
+    }
+    .container
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .post__text h3
+    {
+        font-size: 18px;
+    }
+
+}
+

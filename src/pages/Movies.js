@@ -7,7 +7,7 @@ export  default class Movies extends Component
 {
     render() {
         return(
-            <div>
+            <div className="movies">
             <VerticalList/>
             <More/>
             </div>
