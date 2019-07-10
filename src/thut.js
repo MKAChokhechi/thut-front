@@ -7,6 +7,8 @@ import {Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import Body from "./components/Body";
+import News from "./pages/News";
+// import "bootstrap/dist/css/bootstrap.min.css"
 export  default class Thut extends Component
 {
     constructor($props)
@@ -35,6 +37,7 @@ export  default class Thut extends Component
             <Body>
             <Route path="/" exact={true}  component={Home}/>
             <Route path="/فیلم" component={Movies} />
+            <Route path="/اخبار-سینمایی" component={News} />
             </Body>
             <Footer/>
             </div>

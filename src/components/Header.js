@@ -4,6 +4,7 @@ import '../style/style.css';
 import '../style/rtl.css';
 import '../style/main.css';
 
+
 import Navbar from "./Navbar";
 
 export  default class Header extends Component

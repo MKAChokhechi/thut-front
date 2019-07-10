@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
 import Magnific from "../components/Magnific";
-import Gallery from "../components/Gallery";
+// import Gallery from "../components/Gallery";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Config from "../components/Config";
+import Column from "../components/Column";
 import  '../style/Magnific.css';
 
 export  default class Home extends Component
@@ -62,9 +63,9 @@ export  default class Home extends Component
 
                    </Carousel>
                }
-
+               <Column/>
                <Config/>
-               <Gallery open={this.openMagnific.bind(this)} posts={posts} />
+               {/*<Gallery open={this.openMagnific.bind(this)} posts={posts} />*/}
 
 
            </div>
