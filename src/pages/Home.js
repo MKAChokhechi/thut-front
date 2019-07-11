@@ -1,19 +1,21 @@
 import React,{Component} from 'react';
 import Magnific from "../components/Magnific";
-// import Gallery from "../components/Gallery";
+ //import Gallery from "../components/Gallery";
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Config from "../components/Config";
-import Column from "../components/Column";
+ import Column from "../components/Column";
 import  '../style/Magnific.css';
+import TAb from "../components/Tab";
+import List from "../components/List";
 
 export  default class Home extends Component
 {
     constructor($props)
     {
         super($props);
-        this.state={posts:[],post:0}
+        this.state={posts:[],post:0,active:1}
     }
     componentDidMount()
     {
@@ -38,8 +40,12 @@ export  default class Home extends Component
         this.setState({post:0});
         document.getElementsByTagName("html")[0].style="";
     }
+    getActive(index)
+    {
+     this.setState({active:index})
+    }
     render() {
-        const {posts,post} = this.state;
+        const {posts,post,active} = this.state;
         return(
            <div>
                {post === 0?<div />:
@@ -63,10 +69,14 @@ export  default class Home extends Component
 
                    </Carousel>
                }
-               <Column/>
-               <Config/>
-               {/*<Gallery open={this.openMagnific.bind(this)} posts={posts} />*/}
 
+               <TAb/>
+               <Column index={1} active={active} getActive={this.getActive.bind(this)} open={this.openMagnific.bind(this)}/>
+               <Column index={2} active={active} getActive={this.getActive.bind(this)} open={this.openMagnific.bind(this)}/>
+               <Column index={3} active={active} getActive={this.getActive.bind(this)} open={this.openMagnific.bind(this)}/>
+               <List open={this.openMagnific.bind(this)}/>
+               {/*<Config/>*/}
+               {/*<Gallery open={this.openMagnific.bind(this)} posts={posts} />*/}
 
            </div>
         );

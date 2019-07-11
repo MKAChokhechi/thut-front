@@ -1,0 +1,197 @@
+.row_column_item .holder
+{
+    padding-top: 15px;
+    background-color: #181a1b;
+    margin-top: 15px;
+    margin-bottom: 0;
+    transition: all 1s;
+
+}
+.row_column_item-active .holder
+{
+    padding-top: 15px;
+    background-color: #181a1b;
+    margin-top: 15px;
+    margin-bottom: 0;
+    transition: all 1s;
+
+}
+
+.row_column_item .column_titre
+{
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    border:solid 1px rgba(255,255,255,.2);
+    background:rgba(0,0,0,.5);
+    transition: all 4s;
+}
+.row_column_item-active .column_titre
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    margin-top: 114px;
+    margin-bottom: 0;
+    border:solid 1px #FAB702;
+    background:#FAB702;
+    transition: all 2s;
+}
+
+.row_column_item .column_img
+{
+    width: 100%;
+    border:solid 1px rgba(255,255,255,.2);
+    border-bottom: none;
+    transition: all 1.5s;
+}
+.row_column_item-active .column_img
+{
+    width: 100%;
+
+    border-left: 4px solid #FAB702;
+    border-right: 4px solid #FAB702;
+    transition: all 2s;
+}
+
+.row_column_item .post_titre{
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border:solid 1px rgba(255,255,255,.2);
+    background:rgba(0,0,0,.6);
+    border-bottom: none ;
+    border-top: none;
+    margin-bottom:  0;
+    margin-top: 0;
+    transition: all 1.5s;
+}
+.row_column_item-active .post_titre{
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border:solid 4px #FAB702;
+    background:rgba(0,0,0,.6);
+    border-bottom: none ;
+    border-top: none;
+    margin-bottom:  0;
+    margin-top: 0;
+    transition: all 2s;
+}
+
+.row_column_item .short_text
+{
+    padding: 10px;
+    text-align: right;
+    direction: rtl;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border:solid 1px rgba(255,255,255,.2);
+    border-top: none;
+    background:rgba(0,0,0,.3);
+    color: rgb(204, 255, 255);
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 2s;
+    transition: border 300ms;
+}
+.row_column_item-active .short_text
+{
+    padding: 10px;
+    text-align: right;
+    direction: rtl;
+    margin-top: 0;
+    margin-bottom: 0;
+    border:solid 4px #FAB702;
+    border-top: none;
+    border-bottom: solid 1px rgba(255,255,255,.2);
+    background:rgba(0,0,0,.3);
+    color: rgb(204, 255, 255);
+    font-size: 11px;
+    font-weight: bold;
+    transition: all 2s;
+    transition: border 300ms;
+}
+
+
+.row_column_item .more_post
+{
+    background: none;
+    padding: 15px 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    margin-right: 10px;
+    border: none;
+
+    z-index: -1 ;
+    margin-top: -1px;
+    transition: all 2s ;
+}
+.row_column_item-active .more_post
+{
+    background: none;
+    padding: 15px 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    margin-right: 10px;
+    border: none;
+
+    z-index: 3 ;
+    margin-top: -1px;
+    transition: all 4s;
+}
+
+
+
+
+ .more_post:focus
+{
+    box-shadow: none;
+    outline: none !important;
+}
+@media only screen and (max-width: 765px) {
+    .row_column_item
+    {
+        /*display: none;*/
+        margin-top: 15px;
+    }
+
+    .row_column_item .column_titre
+    {
+        display: none;
+    }
+
+    .row_column_item .holder
+    {
+        padding-top: 0;
+        background-color: #181a1b;
+        margin-top: 0;
+    }
+
+    .row_column_item .column_img {
+        margin-bottom: 0;
+        border: solid 1px rgba(255, 255, 255, .2);
+        border-bottom: none;
+    }
+
+    .row_column_item .post_titre
+    {   padding-right: 5px;
+        border:solid 1px rgba(255,255,255,.2);
+        background:rgba(0,0,0,.5);
+        border-bottom: none ;
+        border-top: none;
+        margin-bottom:  0;
+        margin-top: 0;
+    }
+
+    .row_column_item .short_text
+    {   padding: 10px;
+        margin-top: 0;
+        border:solid 1px rgba(255,255,255,.2);
+        border-top: none;
+        background:rgba(0,0,0,.5);
+    }
+}
