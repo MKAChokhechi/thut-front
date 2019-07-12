@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import Body from "./components/Body";
 import News from "./pages/News";
+import Contact from "./pages/Contact";
 // import "bootstrap/dist/css/bootstrap.min.css"
 export  default class Thut extends Component
 {
@@ -38,6 +39,7 @@ export  default class Thut extends Component
             <Route path="/" exact={true}  component={Home}/>
             <Route path="/فیلم" component={Movies} />
             <Route path="/اخبار-سینمایی" component={News} />
+            <Route path="/تماس-باما" component={Contact} />
             </Body>
             <Footer/>
             </div>
