@@ -32,7 +32,7 @@
     border-top-right-radius: 5px;
     padding: 20px 10px 20px 10px;
     text-align: center;
-    margin-top: 114px;
+    margin-top: 200px;
     margin-bottom: 0;
     border:solid 1px #FAB702;
     background:#FAB702;
@@ -111,7 +111,60 @@
     transition: all 2s;
     transition: border 300ms;
 }
+.row_column_item .term , .row_column_item-active .term
+{
+    width: 100%;
+    text-align: left;
+    direction: rtl;
+    background:rgba(0,0,0,.6);
+    border-left:solid 4px #FAB702;
+    border-right:solid 4px #FAB702;
+    padding-left: 10px;
+    padding-top: 5px;
+    list-style-type: none;
+    height: 120px;
+     margin-bottom: 0;
+     display: flex;
+     flex-flow: wrap;
+     justify-content: space-between;
 
+}
+ .term li
+ {
+
+     margin-top: 10px;
+ }
+
+
+ .point_title{
+    font-size: 170%;
+    color: yellow;
+     margin-left: 10px;
+
+}
+ .term_user
+ {
+     font-size: 90%;
+     margin-left: 10px;
+ }
+ .term_icon
+ {
+     font-size: 80%;
+     margin-left: 10px;
+ }
+.point {
+    font-size: 130%;
+    color: white;
+
+}
+.term_title{
+    font-size: 150%;
+    margin-left: 10px;
+}
+.term_value{
+    font-size: 100%;
+    margin-left: 5px;
+}
 
 .row_column_item .more_post
 {
@@ -153,10 +206,10 @@
     outline: none !important;
 }
 @media only screen and (max-width: 765px) {
-    .row_column_item
+    .row_column_item ,.row_column_item-active
     {
-        /*display: none;*/
-        margin-top: 15px;
+        display: none;
+        /*margin-top: 15px;*/
     }
 
     .row_column_item .column_titre
@@ -164,34 +217,5 @@
         display: none;
     }
 
-    .row_column_item .holder
-    {
-        padding-top: 0;
-        background-color: #181a1b;
-        margin-top: 0;
-    }
 
-    .row_column_item .column_img {
-        margin-bottom: 0;
-        border: solid 1px rgba(255, 255, 255, .2);
-        border-bottom: none;
-    }
-
-    .row_column_item .post_titre
-    {   padding-right: 5px;
-        border:solid 1px rgba(255,255,255,.2);
-        background:rgba(0,0,0,.5);
-        border-bottom: none ;
-        border-top: none;
-        margin-bottom:  0;
-        margin-top: 0;
-    }
-
-    .row_column_item .short_text
-    {   padding: 10px;
-        margin-top: 0;
-        border:solid 1px rgba(255,255,255,.2);
-        border-top: none;
-        background:rgba(0,0,0,.5);
-    }
 }

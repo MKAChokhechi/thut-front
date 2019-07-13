@@ -2,6 +2,7 @@
 {
     background-color: #181a1b;
     display: inline-block;
+    width: 100%;
 }
 section{
     padding: 0 0;
@@ -157,10 +158,6 @@ background-color: #FAB207;
 
 
 
-.tab
-{
-    display: none;
-}
 
 @media only screen and (min-width: 1200px) {
 
@@ -169,82 +166,5 @@ background-color: #FAB207;
 
 }
 @media only screen and (min-width: 770px) {
-
-}
-@media only screen and (max-width: 765px) {
-
-
-    .row_column , .rowcolumn
-    {
-        padding: 0;
-    }
-
-
-
-
-    .section__config
-    {
-        display: none;
-    }
-
-
-
-    .tab{
-        display: inline-block;
-        padding: 0;
-        margin-top: 20px;
-
-
-    }
-
-
-    .tab  .tab-list
-    {
-        list-style-type: none;
-        width: 100%;
-        padding: 0;
-    }
-    .tab .tab-item
-    {
-        display: block;
-        width: 33.4%;
-        float: right;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: #0B0B0B;
-        text-align: center;
-        background-color: #FAB702;
-        border-top: 1px solid #FAB702;
-    }
-    .tab .tab-item:first-child
-    {
-
-        border-top-right-radius: 5px;
-
-    }
-    .tab .tab-item:last-child
-    {
-        border-top-left-radius: 5px;
-
-    }
-    .tab .tab-item:nth-child(2)
-    {
-        border-right: 1px solid #6c757d;
-        border-left: 1px solid #6c757d;
-    }
-    .tab .tab-active
-    {
-
-        width: 33.2%;
-        float: right;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-align: center;
-        color: white;
-        background-color: #181a1b;
-
-    }
-
-
 
 }

@@ -22,6 +22,7 @@ export  default class Home extends Component
         axios.get("http://api.thut.ir/posts/")
             .then(response=>{
                 let  data = response.data;
+                console.log(data);
                 this.setState({posts:data});
 
             })
@@ -70,11 +71,24 @@ export  default class Home extends Component
                    </Carousel>
                }
 
-               <TAb/>
-               <Column index={1} active={active} getActive={this.getActive.bind(this)} open={this.openMagnific.bind(this)}/>
-               <Column index={2} active={active} getActive={this.getActive.bind(this)} open={this.openMagnific.bind(this)}/>
-               <Column index={3} active={active} getActive={this.getActive.bind(this)} open={this.openMagnific.bind(this)}/>
-               <List open={this.openMagnific.bind(this)}/>
+               <TAb Select={this.getActive.bind(this)}/>
+               <Column index={1}
+                       active={active} getActive={this.getActive.bind(this)}
+                       open={this.openMagnific.bind(this)}
+                       posts={posts.filter(obj=>obj.type===1)}
+               />
+               <Column index={2}
+                       active={active} getActive={this.getActive.bind(this)}
+                       open={this.openMagnific.bind(this)}
+                       posts={posts.filter(obj=>obj.type===2)}
+               />
+               <Column index={3}
+                       active={active} getActive={this.getActive.bind(this)}
+                       open={this.openMagnific.bind(this)}
+                       posts={posts.filter(obj=>obj.type===3)}
+               />
+               <List open={this.openMagnific.bind(this)}
+               posts={posts.filter(obj=>obj.type===active)}/>
                {/*<Config/>*/}
                {/*<Gallery open={this.openMagnific.bind(this)} posts={posts} />*/}
 
