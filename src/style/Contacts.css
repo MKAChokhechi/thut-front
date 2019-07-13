@@ -1,0 +1,91 @@
+.row_contact
+{
+    margin-top: 170px;
+    margin-bottom: 30px;
+    direction: rtl;
+}
+.row_contact h3
+{
+    margin-right: 20px;
+}
+.send_info input
+{
+    padding: 10px;
+    color: #fff;
+    border: solid 1px rgba(0,0,0,.3);
+    background: rgba(0,0,0,.2);
+    border-radius: 0;
+    width: 100%;
+    height: 40px;
+}
+.send_info button
+{
+    border: solid 1px rgba(255,255,255,.2);
+    background: rgba(0,0,0,.2);
+    width: 70%;
+    height: 30px;
+    line-height: inherit;
+}
+.send_info input:focus , .text_info textarea:focus
+{
+    box-shadow: none;
+    outline: none !important;
+    border: solid 1px #FAB702 ;
+}
+.send_info button:focus
+{
+    box-shadow: none;
+    outline: none !important;
+
+}
+.send_info button:hover
+{
+    border: solid 1px #FAB702 ;
+    transition: 1.5s;
+}
+.send_info span , .text_info span
+{
+    color: red;
+    font-size: 12px;
+    padding: 10px;
+}
+.text_info textarea
+{
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 175px;
+    padding: 10px;
+
+    color: #fff;
+    border: solid 1px rgba(0,0,0,.3);
+    background: rgba(0,0,0,.2);
+    border-radius: 0;
+}
+.text_info h3
+{
+    margin-top: -29px;
+    margin-right: -1px;
+}
+.text_infous div
+{
+    padding: 10px;
+    border-bottom: solid 1px rgba(255,255,255,.2);
+}
+.text_infous strong
+{
+    margin-left: 10px;
+    color: #FAB702;
+}
+@media only screen and (max-width: 770px)
+{
+    .send_info button
+    {
+        margin-bottom: 35px;
+    }
+    .text_info textarea
+    {
+        margin-top: 10px;
+    }
+
+}
