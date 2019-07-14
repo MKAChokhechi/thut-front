@@ -8,8 +8,8 @@ export  default class List extends Component
         const {posts,open}=this.props;
         return(
             <section className="list_holder">
-                {posts.map(obj=>
-                    <div className="col-md-4 col-sm-12 col-xs-12 list_item">
+                {posts.map((obj,index)=>
+                    <div className="col-md-4 col-sm-12 col-xs-12 list_item" key={index}>
                         <img className="column_img" src={"http://thut.ir/"+obj.image}/>
                         <h3 className="post_titre"> {obj.title}</h3>
                         <ul className="term">
