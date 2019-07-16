@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import  '../style/Column.css';
-import imageg from "../image/p16542466_v_h10_aa.jpg";
+import  {persian} from "./Body";
 
 
 export default class Column extends Component{
@@ -37,7 +37,7 @@ export default class Column extends Component{
                                     <h3 className="post_titre" onClick={event =>open(obj.id)}> {obj.title}</h3>
                                     <ul className="term">
 
-                                        <li><span className="term_value">{point === undefined || point.value}/۱۰</span><span className="glyphicon glyphicon-star-empty point_title"/></li>
+                                        <li><span className="term_value">{point === undefined || persian.convert(point.value)}/۱۰</span><span className="glyphicon glyphicon-star-empty point_title"/></li>
                                         <li><span className="term_value">{publish === undefined || publish.value}</span><span className="glyphicon glyphicon-pushpin term_title"/></li>
                                         <li><span className="term_value">{quality === undefined||quality.value}</span><span className="glyphicon glyphicon-play term_title"/></li>
                                         <li><a href={country === undefined || country.term.slug}><span className="term_value"> {country === undefined || country.term.name}  </span></a><span className="glyphicon glyphicon-globe term_title"/></li>

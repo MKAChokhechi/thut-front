@@ -46,7 +46,7 @@
     font-weight: bold;
 
 }
-.list_item .term
+.term
 {
     width: 100%;
     text-align: left;
@@ -54,17 +54,22 @@
     background:rgba(0,0,0,.6);
     border-left:solid 1px white;
     border-right:solid 1px white;
-    padding-left: 10px;
-    padding-top: 5px;
+    padding: 5px 0 0 0;
+
     list-style-type: none;
     height: 120px;
     margin-bottom: 0;
     display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
+    flex-flow: wrap-reverse;
+    justify-items: center;
+    justify-content: space-around;
 
 }
+.term li
+{
+    margin-top: 10px;
 
+}
 @media only screen and (max-width: 765px) {
     .list_holder
     {
