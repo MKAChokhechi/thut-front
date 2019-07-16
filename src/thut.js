@@ -1,15 +1,20 @@
-import Header from './components/Header';
-import React,{Component} from 'react';
-import 'font-awesome/css/font-awesome.min.css';
-import Footer from "./components/Footer";
-import axios from "axios";
 import {Route} from "react-router-dom";
-import Home from "./pages/Home";
-import Movies from "./pages/Movies";
+import React,{Component} from 'react';
+import axios from "axios";
+import 'font-awesome/css/font-awesome.min.css';
+import Header from './components/Header';
 import Body from "./components/Body";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Series from "./pages/Series";
+import Movies from "./pages/Movies";
 import News from "./pages/News";
+import Artists from "./pages/Artists";
+import Subtitle from "./pages/Subtitles";
+import Trailers from "./pages/Trailers";
 import Contact from "./pages/Contact";
-// import "bootstrap/dist/css/bootstrap.min.css"
+import More from './components/More';
+
 export  default class Thut extends Component
 {
     constructor($props)
@@ -37,9 +42,15 @@ export  default class Thut extends Component
             <Header buttons={header.filter(el=>(el.type==="navButton"))}/>
             <Body>
             <Route path="/" exact={true}  component={Home}/>
+            <Route path="/فیلم/:id"  component={More} />
             <Route path="/فیلم" component={Movies} />
+            <Route path="/سریال" component={Series} />
             <Route path="/اخبار-سینمایی" component={News} />
+            <Route path="/هنرمندان" component={Artists} />
+            <Route path="/تریلر" component={Trailers} />
+            <Route path="/زیرنویس" component={Subtitle} />
             <Route path="/تماس-باما" component={Contact} />
+
             </Body>
             <Footer/>
             </div>

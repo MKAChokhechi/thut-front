@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import imageg from "../image/p16542466_v_h10_aa.jpg";
 import  '../style/List.css';
 
 export  default class List extends Component
@@ -10,8 +9,8 @@ export  default class List extends Component
             <section className="list_holder">
                 {posts.map((obj,index)=>
                     <div className="col-md-4 col-sm-12 col-xs-12 list_item" key={index}>
-                        <img className="column_img" src={"http://thut.ir/"+obj.image}/>
-                        <h3 className="post_titre"> {obj.title}</h3>
+                        <img className="column_img" src={"http://thut.ir/"+obj.image} onClick={()=>open(obj.id)}/>
+                        <h3 className="post_titre" onClick={()=>open(obj.id)}> {obj.title}</h3>
                         <ul className="term">
                             <li><span className="term_value">۵.۴/۱۰</span><span
                                 className="glyphicon glyphicon-star-empty point_title"/></li>
