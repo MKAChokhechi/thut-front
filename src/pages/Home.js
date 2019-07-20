@@ -1,16 +1,13 @@
-import React,{Component} from 'react';
-import Magnific from "../components/Magnific";
- //import Gallery from "../components/Gallery";
+import React from 'react';
 import axios from "axios";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import Config from "../components/Config";
- import Column from "../components/Column";
+import Column from "../components/Column";
 import  '../style/Magnific.css';
 import TAb from "../components/Tab";
 import List from "../components/List";
+import DefaultPage from "../components/DefaultPage";
 
-export  default class Home extends Component
+export  default class Home extends DefaultPage
 {
     constructor($props)
     {
@@ -49,26 +46,8 @@ export  default class Home extends Component
         const {posts,post,active} = this.state;
         return(
            <div>
-               {post === 0?<div />:
-                   <Magnific close={this.closeMagnific.bind(this)} post={post}/>
-               }
-               {posts.length===0?<div/>:
-                   <Carousel autoPlay={true}
-                             showStatus={false}
-                             showIndicators={false}
-                             showThumbs={false}
-                             infiniteLoop={true}
-                             emulateTouch={true}>
-                       {posts.filter(obj => obj.slider === true).map((obj, index) => (
-                           <div key={index}>
-                               <img
-                                   src={'http://thut.ir/' + (obj.meta.find(ob => ob.key === "main-slider-photo").link.image)}
-                                   className="mainCarousel"/>
-                               <div className="description">اسلاید اول</div>
-                           </div>
-                       ))}
-
-                   </Carousel>
+               {
+                   super.render()
                }
 
                <TAb Select={this.getActive.bind(this)}/>

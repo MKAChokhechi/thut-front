@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import  '../style/More.css';
 import axios from 'axios';
-import imageg from "../assets/loding.gif";
 export default class More extends Component{
     state = {post:""};
     componentDidMount() {

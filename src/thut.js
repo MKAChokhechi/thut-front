@@ -42,8 +42,8 @@ export  default class Thut extends Component
             <Header buttons={header.filter(el=>(el.type==="navButton"))}/>
             <Body>
             <Route path="/" exact={true}  component={Home}/>
+            <Route path="/فیلم" exact={true} component={Movies} />
             <Route path="/فیلم/:id"  component={More} />
-            <Route path="/فیلم" component={Movies} />
             <Route path="/سریال" component={Series} />
             <Route path="/اخبار-سینمایی" component={News} />
             <Route path="/هنرمندان" component={Artists} />
