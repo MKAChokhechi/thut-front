@@ -65,7 +65,7 @@ a, a:hover, a:active, a:focus {
 }
 .vsearch_input
 {
-    padding: 4px 0 4px 10px;
+    padding: 4px 8px 4px 10px;
     float: left;
     width: 70%;
     margin-top: 1px;

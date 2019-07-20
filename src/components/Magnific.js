@@ -88,7 +88,7 @@ export default class Magnific extends Component{
                         <strong>ساخت</strong>{country === undefined || country.name}<br/>
                         <strong>کیفیت </strong>{quality === undefined||quality.value}<br/>
                         <strong>ژانر </strong>{genre === undefined ||genre.map((item,index)=><span key={index}> <a href={item.slug} >{item.name}</a>{genre.length-1===index||' | '}</span>)}<br/>
-                        <strong>کارگردان </strong>{director===undefined||director.slug.toString()}> <span className="term_value">{director===undefined||director.name} </span><br/>
+                            <strong>کارگردان </strong>{director===undefined||<a href={director.slug.toString()}> <span className="term_value">{director===undefined||director.name} </span></a>}<br/>
                             <strong>ستارگان </strong>{actress ===undefined ||actress.map((item,index)=><span key={index}> <a href={item.slug} >{item.name}</a>{actress.length-1===index||' , '}</span>)}<br/>
                             <strong>امتیاز </strong>{point === undefined || persian.convert(point.value)}/۱۰<br/>
                         </div>

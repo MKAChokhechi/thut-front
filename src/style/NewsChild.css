@@ -52,3 +52,7 @@
     box-shadow: none;
     outline: none !important;
 }
+.card_text
+{
+    font-size: 12px;
+}

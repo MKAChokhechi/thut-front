@@ -16,8 +16,6 @@ export default class Column extends Component{
 
         const {active,index,open,posts} = this.props;
         return (
-
-
                 <div className={"col-md-4 col-sm-4 col-xs-12 "+(active===index?" row_column_item-active":"row_column_item")} >
                     <div className="holder">
                         <h3 className="column_titre">فیلم</h3>

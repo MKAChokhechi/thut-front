@@ -1,14 +1,16 @@
-import React,{Component} from 'react';
-import  '../style/More.css';
-import axios from 'axios';
-export default class More extends Component{
-    state = {post:""};
-    componentDidMount() {
-        const {params} = this.props.match;
-        axios.get("http://api.thut.ir/posts/"+params.id)
-            .then(response=>{
-                const post = response.data;
-                this.setState({post});
+    import React,{Component} from 'react';
+    import  '../style/More.css';
+    import axios from 'axios';
+    import imageg from "../assets/loding.gif";
+    import Comment from "./Comment";
+    export default class More extends Component{
+        state = {post:""};
+        componentDidMount() {
+            const {params} = this.props.match;
+            axios.get("http://api.thut.ir/posts/"+params.id)
+                .then(response=>{
+                    const post = response.data;
+                    this.setState({post});
 
             })
             .catch(error=>{
@@ -152,6 +154,8 @@ export default class More extends Component{
                                 <input placeholder="ایمیل*"/>
                                 <button>ارسال پیام </button>
                             </div>
+                            <Comment/>
+
                         </div>
                     </div>
 
