@@ -1,6 +1,7 @@
 import React   from 'react';
 import '../style/NewsChild.css';
 import DefaultPage from "./DefaultPage";
+import moment from 'moment-jalaali';
 import axios from "axios";
 
 
@@ -23,9 +24,15 @@ export default class NewsChild extends DefaultPage {
     {
         let today = new Date();
         let before = new Date(data);
-
-        if(today.getDate() > before.getDate())
-            return  before.getFullYear()+"/"+before.getMonth()+"/"+before.getFullYear();
+        let totime = today.getTime(),betime = before.getTime();
+        if(totime > betime+86400000)
+            return moment(before.getFullYear()+"/"+before.getMonth()+"/"+before.getDate(),"YYYY/MM/DD")
+                .format("jYYYY/jMM/jDD");
+        if(totime > betime+3600000)
+            return before.getHours()+" hour";
+        if(totime > betime+60000)
+            return before.getMinutes()+ " min";
+        return before.getSeconds() +" sec"
 
 
     }
