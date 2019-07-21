@@ -34,7 +34,7 @@ export  default class DefaultPage extends Component
 
                 ,
 
-                    posts.length===0?<div/>:
+                    posts.length===0?"":
                         <Carousel autoPlay={true}
                                   showStatus={false}
                                   showIndicators={false}

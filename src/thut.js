@@ -50,7 +50,6 @@ export  default class Thut extends Component
             <Route path="/تریلر" component={Trailers} />
             <Route path="/زیرنویس" component={Subtitle} />
             <Route path="/تماس-باما" component={Contact} />
-
             </Body>
             <Footer/>
             </div>
