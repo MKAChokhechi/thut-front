@@ -12,7 +12,6 @@ export default class NewsChild extends DefaultPage {
         axios.get("http://api.thut.ir/posts/")
             .then(response=>{
                 let  data = response.data;
-                console.log(data);
                 this.setState({posts:data});
 
             })
@@ -46,8 +45,7 @@ export default class NewsChild extends DefaultPage {
                 <div className="container ">
                     <div className="row rownews">
                         {
-                            posts.map ( ( obj , index ) => {
-                                return (
+                            posts.map ( ( obj , index ) =>
                         <div className="col-md-4" key={index}>
 
                                             <div className=" mb-4 box-shadow card_row" >
@@ -73,8 +71,8 @@ export default class NewsChild extends DefaultPage {
                                             </div>
                         </div>
 
-                                )
-                                    }
+
+
                                 )
                             }
 
