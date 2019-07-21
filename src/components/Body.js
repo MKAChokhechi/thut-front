@@ -26,7 +26,10 @@ export class persian
         let num = "";
         number.toString();
         for(let i = 0 ;i<number.length;i++)
+            if(this.dict[number[i]]!==undefined)
             num+=this.dict[number[i]];
+            else
+                num+=number[i];
         return num;
     }
 }

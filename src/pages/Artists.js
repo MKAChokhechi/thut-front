@@ -6,7 +6,6 @@ export default  class Artists extends Component
     render() {
         return(
            <div>
-
            </div>
         );
     }
