@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
-
-
+import ReactHtmlParser from 'react-html-parser';
 import axios from "axios";
 import imageg from "../assets/loding.gif";
 import {Carousel} from "react-responsive-carousel";
@@ -13,7 +12,7 @@ export default class Magnific extends Component{
         this.state={post:0}
     }
     componentDidMount() {
-            axios.get("http://api.thut.ir/posts/"+this.props.post)
+            axios.get(`http://api.thut.ir/posts/${this.props.post}/`)
                 .then(response=>{
                     this.setState({post:response.data});
 
@@ -29,13 +28,13 @@ export default class Magnific extends Component{
         let point ,quality,director,publish,genre,actress,country;
 
         if (post!==0) {
-             point = post.meta.find(meta => meta.key === "point");
-             quality = post.meta.find(meta => meta.key === "quality");
-             director = post.term.find(term => term.type === "director");
-             publish = post.meta.find(meta => meta.key === "publish");
-             genre = post.term.filter(term => term.type === "genre");
-             actress = post.term.filter(term => term.type === "actress");
-             country = post.term.find(term => term.type === "country");
+             point = post.metaValue.find(meta => meta.key === "point");
+             quality = post.metaValue.find(meta => meta.key === "quality");
+             director = post.termValue.find(term => term.type === "director");
+             publish = post.metaValue.find(meta => meta.key === "publish");
+             genre = post.termValue.filter(term => term.type === "genre");
+             actress = post.termValue.filter(term => term.type === "actress");
+             country = post.termValue.find(term => term.type === "country");
         }
 
 
@@ -64,7 +63,7 @@ export default class Magnific extends Component{
                                       showThumbs={true}
                                       infiniteLoop={true}
                                       emulateTouch={true}>
-                                {post.meta.filter(obj => obj.key === "extra-photo"||obj.key === "main-slider-photo").map((obj, index) => (
+                                {post.metaValue.filter(obj => obj.key === "extra-photo"||obj.key === "main-slider-photo").map((obj, index) => (
                                     <div key={index}>
                                         <img
                                             src={'http://thut.ir/' + (obj.link.image)}
@@ -73,7 +72,7 @@ export default class Magnific extends Component{
                                 ))}
                                 <div >
                                     <img
-                                        src={'http://thut.ir/' + (post.image)}
+                                        src={post.image}
                                         className="mainCarousel"/>
                                 </div>
 
@@ -93,9 +92,9 @@ export default class Magnific extends Component{
                             <strong>امتیاز </strong>{point === undefined || persian.convert(point.value)}/۱۰<br/>
                         </div>
 
-
-
-                        {post.content}
+                            <div>
+                        {ReactHtmlParser(post.content)}
+                            </div>
                         </div>
                         </div>
                     }

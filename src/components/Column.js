@@ -47,7 +47,7 @@ export default class Column extends Component{
                                     <p className="short_text">
 
 
-                                        {obj.content.substring(0,250)+"..."}
+                                        {obj.meta.find(item=>item.key="short_text").value.substring(0,250)+"..."}
                                     </p>
                                 </div>)}
 

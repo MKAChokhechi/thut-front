@@ -44,7 +44,7 @@ export  default class DefaultPage extends Component
                             {posts.filter(obj => obj.slider === true).map((obj, index) => (
                                 <div key={index}>
                                     <img
-                                        src={'http://thut.ir/' + (obj.meta.find(ob => ob.key === "main-slider-photo").link.image)}
+                                        src={ `http://thut.ir${obj.meta.find(ob => ob.key === "main-slider-photo").link.image}`}
                                         className="mainCarousel"/>
                                     <div className="description">اسلاید اول</div>
                                 </div>
