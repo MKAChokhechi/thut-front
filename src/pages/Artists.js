@@ -1,7 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
+import axios from "axios";
 import Gallery from "../components/Gallery";
 import DefaultPage from "../components/DefaultPage";
-import axios from "axios";
 
 
 export default  class Artists extends DefaultPage
@@ -17,11 +17,12 @@ export default  class Artists extends DefaultPage
                 console.log(error);
             })
     }
+
     render() {
         const {posts} = this.state;
         return(
            <div>
-                <Gallery posts={posts} open={this.openMagnific} />
+                <Gallery posts={posts} open={this.openMagnific}/>
            </div>
         );
     }

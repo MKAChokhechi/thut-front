@@ -1,6 +1,6 @@
 .rownews
 {
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 100px;
     direction: rtl;
 }
@@ -8,6 +8,7 @@
 {
 
     box-shadow:0 0 8px 1px #FAB702  ;
+    margin-bottom: 20px;
 }
 .card_row img
 {

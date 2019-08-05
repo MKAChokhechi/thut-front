@@ -3,7 +3,7 @@ import '../style/NewsChild.css';
 import DefaultPage from "./DefaultPage";
 import moment from 'moment-jalaali';
 import axios from "axios";
-
+import {persian} from './Body';
 
 export default class NewsChild extends DefaultPage {
 
@@ -58,14 +58,14 @@ export default class NewsChild extends DefaultPage {
                                                         { obj.title }
                                                     </h5>
                                                     <p className="card-text">
-                                                        { obj.content }
+                                                        { obj.content.substr(0,100)+' ...' }
                                                     </p>
                                                     <div
                                                         className="d-flex justify-content-between align-items-center card_body_item">
 
-                                                        <button onClick={event => this.openMagnific(obj.id)}> نمایش</button>
+                                                        <button onClick={event => this.openMagnific(obj.id)}> ادامه </button>
 
-                                                        <small className="text-muted">{this.getTime(obj.modified)}</small>
+                                                        <small className="text-muted">{persian.convert(this.getTime(obj.modified))}</small>
                                                     </div>
                                                 </div>
                                             </div>
